@@ -20,10 +20,7 @@ app.use(express.json());
 // app.use(cors());
 // app.use("/uploads", express.static(path.resolve("uploads"))); 
 
-app.use(cors({
-    origin: ['http://localhost:5173','192.168.1.13:5173','https://dashboard-frontend-lime.vercel.app/','https://dashboard-frontend-lime.vercel.app'],
-    credentials: true
-  }));
+
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/items", itemRoutes);
